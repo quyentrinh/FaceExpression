@@ -24,23 +24,19 @@ class ViewController: UIViewController {
         return picker
     }()
     
-    var rekognitionObject:AWSRekognition?
+    
+    
+    var rekognition: AWSRekognition = AWSRekognition.default()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        rekognitionObject = AWSRekognition.default()
-//        let celebImageAWS = AWSRekognitionImage()
-////        celebImageAWS?.bytes =
-//        let faceRequest = AWSRekognitionDetectFacesRequest()
-//        faceRequest?.attributes = ["ALL"]
-//        faceRequest?.image = AWSRekognitionImage()
-//        rekognitionObject?.detectFaces(faceRequest!, completionHandler: { respond, error in
-//
-//        })
+        setup()
     }
     
     private func setup() {
+        
+        configureAWSRekognition()
+        
         startButton.buttonDidTap = { [weak self] in
             guard let self = self else {
                 fatalError()
@@ -55,6 +51,10 @@ class ViewController: UIViewController {
                 self.analysisBarcode()
             }
         }
+    }
+    
+    private func configureAWSRekognition() {
+        //
     }
     
     // MARK: - SELECTOR
@@ -87,6 +87,41 @@ class ViewController: UIViewController {
     }
     
     private func analysisFace() {
+        guard let inputImage = inputImage,
+              let data = inputImage.jpegData(compressionQuality: 0.4),
+              let awsImage = AWSRekognitionImage(),
+              let faceRequest = AWSRekognitionDetectFacesRequest() else {
+                  return
+              }
+        
+        DispatchQueue.main.async {
+            self.startButton.startLoading()
+        }
+        
+        awsImage.bytes = data
+        
+        faceRequest.attributes = ["ALL"]
+        faceRequest.image = awsImage
+        rekognition.detectFaces(faceRequest, completionHandler: { [weak self] respond, error in
+            guard let self = self else {
+                fatalError()
+            }
+            DispatchQueue.main.async {
+                self.startButton.stopLoading()
+            }
+            if error != nil {
+                DispatchQueue.main.async {
+                    self.showAlert(message: error!.localizedDescription)
+                }
+            }
+            guard let result = respond else {
+                DispatchQueue.main.async {
+                    self.showAlert(message: "NO RESULT")
+                }
+                return
+            }
+            print(result)
+        })
     }
     
     private func analysisBarcode() {
@@ -108,6 +143,8 @@ class ViewController: UIViewController {
             })
         }
     }
+    
+    // MARK: - DATA HANDLE
     
 }
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7CD3E5DCC589D6BA5570768A /* Pods_FaceExpression.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241E0C5C9D467E4D467C3962 /* Pods_FaceExpression.framework */; };
+		EF142EAA2270675F00BEF21C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF142EA92270675F00BEF21C /* DetailViewController.swift */; };
+		EFBAD23F22705A3A00EBF934 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = EFDC7344227020DD005E8AC7 /* awsconfiguration.json */; };
 		EFDC732F226FFC71005E8AC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDC732E226FFC71005E8AC7 /* AppDelegate.swift */; };
 		EFDC7331226FFC71005E8AC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDC7330226FFC71005E8AC7 /* ViewController.swift */; };
 		EFDC7334226FFC71005E8AC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFDC7332226FFC71005E8AC7 /* Main.storyboard */; };
@@ -21,6 +23,7 @@
 		241E0C5C9D467E4D467C3962 /* Pods_FaceExpression.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceExpression.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF7618C9E2CD1CFF8D40B00 /* Pods-FaceExpression.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceExpression.debug.xcconfig"; path = "Target Support Files/Pods-FaceExpression/Pods-FaceExpression.debug.xcconfig"; sourceTree = "<group>"; };
 		EEA635EE12C695567D34B7A3 /* Pods-FaceExpression.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceExpression.release.xcconfig"; path = "Target Support Files/Pods-FaceExpression/Pods-FaceExpression.release.xcconfig"; sourceTree = "<group>"; };
+		EF142EA92270675F00BEF21C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EFDC732B226FFC71005E8AC7 /* FaceExpression.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceExpression.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFDC732E226FFC71005E8AC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFDC7330226FFC71005E8AC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		EFDC733A226FFC72005E8AC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFDC734022700AF1005E8AC7 /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
 		EFDC734222700BA8005E8AC7 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		EFDC7344227020DD005E8AC7 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = FaceExpression/Resources/awsconfiguration.json; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,43 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EF142EA52270647B00BEF21C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EFDC734022700AF1005E8AC7 /* LoadingButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EF142EA62270648800BEF21C /* Helps */ = {
+			isa = PBXGroup;
+			children = (
+				EFDC734222700BA8005E8AC7 /* Utilities.swift */,
+			);
+			path = Helps;
+			sourceTree = "<group>";
+		};
+		EF142EA72270649000BEF21C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EFDC7344227020DD005E8AC7 /* awsconfiguration.json */,
+				EFDC7332226FFC71005E8AC7 /* Main.storyboard */,
+				EFDC7335226FFC72005E8AC7 /* Assets.xcassets */,
+				EFDC7337226FFC72005E8AC7 /* LaunchScreen.storyboard */,
+				EFDC733A226FFC72005E8AC7 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EF142EA82270649F00BEF21C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EFDC7330226FFC71005E8AC7 /* ViewController.swift */,
+				EF142EA92270675F00BEF21C /* DetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		EFDC7322226FFC71005E8AC7 = {
 			isa = PBXGroup;
 			children = (
@@ -83,13 +124,10 @@
 			isa = PBXGroup;
 			children = (
 				EFDC732E226FFC71005E8AC7 /* AppDelegate.swift */,
-				EFDC7330226FFC71005E8AC7 /* ViewController.swift */,
-				EFDC7332226FFC71005E8AC7 /* Main.storyboard */,
-				EFDC7335226FFC72005E8AC7 /* Assets.xcassets */,
-				EFDC7337226FFC72005E8AC7 /* LaunchScreen.storyboard */,
-				EFDC733A226FFC72005E8AC7 /* Info.plist */,
-				EFDC734022700AF1005E8AC7 /* LoadingButton.swift */,
-				EFDC734222700BA8005E8AC7 /* Utilities.swift */,
+				EF142EA62270648800BEF21C /* Helps */,
+				EF142EA52270647B00BEF21C /* Views */,
+				EF142EA82270649F00BEF21C /* ViewControllers */,
+				EF142EA72270649000BEF21C /* Resources */,
 			);
 			path = FaceExpression;
 			sourceTree = "<group>";
@@ -154,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFBAD23F22705A3A00EBF934 /* awsconfiguration.json in Resources */,
 				EFDC7339226FFC72005E8AC7 /* LaunchScreen.storyboard in Resources */,
 				EFDC7336226FFC72005E8AC7 /* Assets.xcassets in Resources */,
 				EFDC7334226FFC71005E8AC7 /* Main.storyboard in Resources */,
@@ -219,6 +258,7 @@
 				EFDC734122700AF1005E8AC7 /* LoadingButton.swift in Sources */,
 				EFDC7331226FFC71005E8AC7 /* ViewController.swift in Sources */,
 				EFDC734322700BA8005E8AC7 /* Utilities.swift in Sources */,
+				EF142EAA2270675F00BEF21C /* DetailViewController.swift in Sources */,
 				EFDC732F226FFC71005E8AC7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,8 +407,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9FLMUZHBY2;
-				INFOPLIST_FILE = FaceExpression/Info.plist;
+				DEVELOPMENT_TEAM = ZYN5GJ22ZJ;
+				INFOPLIST_FILE = FaceExpression/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -387,8 +427,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9FLMUZHBY2;
-				INFOPLIST_FILE = FaceExpression/Info.plist;
+				DEVELOPMENT_TEAM = ZYN5GJ22ZJ;
+				INFOPLIST_FILE = FaceExpression/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
