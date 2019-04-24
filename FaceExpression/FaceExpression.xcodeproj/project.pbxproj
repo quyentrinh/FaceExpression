@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7CD3E5DCC589D6BA5570768A /* Pods_FaceExpression.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241E0C5C9D467E4D467C3962 /* Pods_FaceExpression.framework */; };
 		EF142EAA2270675F00BEF21C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF142EA92270675F00BEF21C /* DetailViewController.swift */; };
+		EF142EAC227074B400BEF21C /* CurvedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF142EAB227074B400BEF21C /* CurvedView.swift */; };
+		EF142EAE2270814600BEF21C /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF142EAD2270814600BEF21C /* ResultCell.swift */; };
 		EFBAD23F22705A3A00EBF934 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = EFDC7344227020DD005E8AC7 /* awsconfiguration.json */; };
 		EFDC732F226FFC71005E8AC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDC732E226FFC71005E8AC7 /* AppDelegate.swift */; };
 		EFDC7331226FFC71005E8AC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDC7330226FFC71005E8AC7 /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 		DCF7618C9E2CD1CFF8D40B00 /* Pods-FaceExpression.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceExpression.debug.xcconfig"; path = "Target Support Files/Pods-FaceExpression/Pods-FaceExpression.debug.xcconfig"; sourceTree = "<group>"; };
 		EEA635EE12C695567D34B7A3 /* Pods-FaceExpression.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceExpression.release.xcconfig"; path = "Target Support Files/Pods-FaceExpression/Pods-FaceExpression.release.xcconfig"; sourceTree = "<group>"; };
 		EF142EA92270675F00BEF21C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EF142EAB227074B400BEF21C /* CurvedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurvedView.swift; sourceTree = "<group>"; };
+		EF142EAD2270814600BEF21C /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
 		EFDC732B226FFC71005E8AC7 /* FaceExpression.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceExpression.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFDC732E226FFC71005E8AC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFDC7330226FFC71005E8AC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +72,9 @@
 		EF142EA52270647B00BEF21C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EF142EAB227074B400BEF21C /* CurvedView.swift */,
 				EFDC734022700AF1005E8AC7 /* LoadingButton.swift */,
+				EF142EAD2270814600BEF21C /* ResultCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -102,6 +108,13 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		EF142EAF2270831C00BEF21C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EFDC7322226FFC71005E8AC7 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +138,7 @@
 			children = (
 				EFDC732E226FFC71005E8AC7 /* AppDelegate.swift */,
 				EF142EA62270648800BEF21C /* Helps */,
+				EF142EAF2270831C00BEF21C /* Model */,
 				EF142EA52270647B00BEF21C /* Views */,
 				EF142EA82270649F00BEF21C /* ViewControllers */,
 				EF142EA72270649000BEF21C /* Resources */,
@@ -256,9 +270,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFDC734122700AF1005E8AC7 /* LoadingButton.swift in Sources */,
+				EF142EAC227074B400BEF21C /* CurvedView.swift in Sources */,
 				EFDC7331226FFC71005E8AC7 /* ViewController.swift in Sources */,
 				EFDC734322700BA8005E8AC7 /* Utilities.swift in Sources */,
 				EF142EAA2270675F00BEF21C /* DetailViewController.swift in Sources */,
+				EF142EAE2270814600BEF21C /* ResultCell.swift in Sources */,
 				EFDC732F226FFC71005E8AC7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

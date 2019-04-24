@@ -41,6 +41,11 @@ class ViewController: UIViewController {
             guard let self = self else {
                 fatalError()
             }
+            
+//            if let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+//                detailVC.resultImage = self.inputImage
+//                self.navigationController?.pushViewController(detailVC, animated: true)
+//            }
 
             switch self.detectOption {
             case .text:
@@ -66,18 +71,19 @@ class ViewController: UIViewController {
         detectOption = DetectOption(rawValue: segment.selectedSegmentIndex) ?? .text
     }
     @IBAction func addButtonDidTap(_ sender: Any) {
+
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        
+
         actionSheet.addAction(UIAlertAction(title: "Take Photo", style: .default, handler: { (alert: UIAlertAction!) -> Void in
             self.openCamera()
         }))
-        
+
         actionSheet.addAction(UIAlertAction(title: "Open Photo Library", style: .default, handler: { (alert: UIAlertAction!) -> Void in
             self.openPhotoLibrary()
         }))
-        
+
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        
+
         present(actionSheet, animated: true, completion: nil)
     }
     
